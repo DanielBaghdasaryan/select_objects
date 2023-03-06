@@ -89,9 +89,10 @@ if __name__ == '__main__':
         try:
             print('Input number of top brightest objects, default 10:')
             N = int(input().strip() or 10)
+            assert N > 0
             print(f'N: {N}')
         except:
-            print('Only integer numbers are accepted')
+            print('Only positive integer numbers are accepted')
 
     # Select objects
     objects = select_objects(data, RA, DEC, FOV_H, FOV_V, N, ra_col, dec_col, mag_col)
